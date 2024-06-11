@@ -7,15 +7,44 @@
         EASTC  CONVOCATION CEREMONY
         </title>
         <style>
+
             body{
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
-                line-height: 1.6;
-                background-color: #f4f4f4;
+                line-height: 1.5;
+                background-color: rgb(45, 140, 184);
             }
+                .slideshow-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 200px;
+                    margin: auto;
+                }
+                .mySlides {
+                    position: relative;
+                    margin-bottom: 20px;
+                    width: 50%;
+                }
+                .mySlides img {
+                    width: 100%;
+                    height: auto;
+                    vertical-align: middle;
+                } 
+                .text{
+                    color: #0a0404;
+                    font-size: 20px;
+                    padding: 8px 12px;
+                    text-align: center;
+                    background-color: rgba(0,0,0,0,5);
+                    position: absolute;
+                    bottom: 8px;
+                    width: calc(100%-16px);
+                    right: 16px;
+                    transform: translateX(-50%);}
             header{
-                background-color: #4CAF50;
+                background-color: rgb(1, 1, 36);
                 color: white;
                 padding: 20px 0;
                 text-align: center;
@@ -23,59 +52,79 @@
             section{
                 padding: 20px;
                 margin: 20px;
-                background: white;
+                background-color:water-droplets;
                 border-radius: 5px;
                 box-shadow: 0 0 10px rgba(0,0,0,0,1);
             }
-            h2{
-                color: #333;
-            }
-            #registration-form label {
-                display: block;
-                margin: 10px 0 5px;
-            }
-            #registration-form input{
-                width: 100%;
-                padding: 8px;
-                margin-bottom: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-            #registration-form button{
-                padding: 10px 20px;
-                background-color: #4CAF50;
+            p{
                 color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
             }
+            li{
+                color: white;
+            }
+            h2{
+                color: #f7efef;
+            }
+            table{
+                font-style: italic;
+                color: white;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td{
+             border: 1px solid rgb(252, 244, 244);}
+             th, td, {
+                padding:8px;
+                text-align: left;
+             }
+             th{
+                background-color: #0f0101;
+             }
             #map{
                 width: 100%;
-                height: 300%;
-                background-color: #ddd;
+                height: 100%;
+                color:white;
             }
             .theme-section{
-                background: color #e9f7ef;
+                background: color rgb(233, 247, 239);
                 padding: 20px;
                 margin: 20px;
                 border-left: 5px solid #4CAF50;
             }
+            center-image {
+                height: 50px;
+            width: 29; }
         </style>
     </head>
     <body>
         <header>
-            <h1>EASTERN AFRICA STATISTICAL TRAINING CENTRE(EASTC)
-            CONVOCATION CEREMONY
+         <h1>EASTERN AFRICA STATISTICAL TRAINING CENTRE(EASTC)<br>
+                     CHUO CHA TAKWIMU MASHARIKI MWA AFRICA<br>
+                           7TH CONVOCATION CEREMONY
             </h1>
             <p>Date: 18,november,2024 
         at 9:00 AM </p>
-                <p>Location: EASTC Function hall,<abbr title="EASTERN AFRICA STATISTICAL TRAINING CENTRE">EASTC
+                <p>Location: EASTC <br>VENUE:Function hall,<abbr title="EASTERN AFRICA STATISTICAL TRAINING CENTRE">EASTC
                 </abbr></p>
         </header>
         <section id="introduction">
        <h2>Welcome</h2>     
-<p>Welcome the 2024 graduation ceremony of <abbr title="EASTERN AFRICA STATISTICAL TRAINING CENTRE">EASTC
+<p>Welcome the 2024 convocation ceremony of <abbr title="EASTERN AFRICA STATISTICAL TRAINING CENTRE">EASTC
     </abbr>. It is a special day as we congratulate our students for achieving their academic goals.</p>
+        </section>
+        <section><h2>President of 7th convocation ceremony<br>
+        DR:Nyambilila Minga</h2>
+               <div class="slideshow">
+                <div class="mySlides">
+                    <img src="tafawa.jpg">
+                <div class="text"></div>
+                </div>
+               <h2>Rector of EASTC<br>
+            DR:Katunzi </h2>
+               <div class="mySlides">
+                <img src="rector.png">
+                <div class="text"></div>
+               </div>
         </section>
         <section class="theme-section">
             <h2>This Year's Topic </h2>
@@ -88,50 +137,67 @@
                          and big data in the economic transformation and sustainable development
                         of Africa"</strong></p>
         </section>
-        <section id="schedule">
-            <h2>Schedule of Events</h2>
-            <ul>
-                <li>10:00 AM - Reception</li>
-                <li>10:30 AM - Ceremony Begins</li>
-                <li>11:00 AM - Vice chancellor's speech</li>
-                <li>11:30 AM - Certificate Awarding</li>
-                <li>12:00 PM - Photo session</li>
-             </Ul>
-        </section>
-        <section id="directions">
-            <h2>
-                Directions
-            </h2>
-            <p>
-                Provide directions to the venue. Here is the map:
-            </p>
-            <div id="map"></div>
-        </section>
-        <section id="registration">
-            <h2>Registration</h2>
-            <p>Register for the convocation ceremony using the form below:</p>
-<form id="registration-form">
-    <input type="text"
-    id="name" name="name" required>
-        <label for ="email">Email:</label>
-        
-        </section><input type ="email" id="email"required><button type="submit">submit</button>
-</form>
-        <a href="contact.html">Contact Us</a>
-        <script>
-            document.getElementById('registration-form').addEventListener('submit' ,function(event) {
-                event.preventDefault();
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                if(name && mail){
-                    alert('thank you for registration, ${name}! we will send further information to ${email}.')
-            document.getElementById('email');    
-            document.etElementById('reistration-form').reset();}
-            else{
-                alert('please fill out all required fields.')
-            }
-        }
-    );
-    </script>
+            <h2>Awards events</h2>
+            <p>During convocation ceremony at Eastern Africa Statistical Training Centre, outstanding students and leaders 
+                of the EASTCSO are recognized through special gift presentation.
+                This ceremony honors their exceptional academic achievements and exemplary leadership roles
+                within the student community.
+           <div class="center-image"><img src="2.jpg"></div></p>
+             <section>
+                <table>
+               <h2>
+                Program Timetable
+               </h2>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Responsible</th>
+                </tr>
+                <tr>
+                    <td>9:00-9:30</td>
+                    <td>registration</td>
+                    <td>All,sectretary</td>
+                </tr>
+                <tr>
+                <td>9:30-10:00</td>
+                <td>Presenting the program</td>
+                <td>M.C</td>
+                </tr>
+                <tr>
+                <td>10:00-10:30</td>
+                <td>Opening the program</td>
+                <td>President of convocation</td>
+                <tr>
+                    <td>10:30-11:00</td>
+                    <td>Awarding the best student & EASTCSO leaders</td>
+                    <td>Rector,Guest of honor</td>
+                </tr>
+                <tr>
+                    <td>11:00-11:30</td>
+                    <td>Discussion(Presentation 1,2 & 3)</td>
+                    <td>All,Moderator</td>
+                </tr>
+                <tr>
+                    <td>11:30-12:00</td>
+                    <td>Departure Remarks of Guest of Honor</td>
+                    <td>Rector,Guest of Honor,Invited Guests</td>
+                    <tr>
+                        <td>12:00-12:15</td>
+                        <td>Group Photo</td>
+                        <td>M.C</td>
+                    </tr>
+               </table>
+             </section>
+             <section>
+                <h2>Map</h2>
+        <div id="map">Here is the direction to the location where ceremony will be held</div>
+        <a href="https://www.google.com/maps/dir//Chuo+cha+Takwimu,+Dar+es+Salaam" target="_blank">click here</a>
+       <section><h2>Contact Us</h2>
+               <ul>
+                <li>Email:eastc@gmail.ac.tz</li>
+                <li>Phone number:+255 784 784 106</li>
+               </ul>
+               @eastc
+       </section>
     </body>
 </html>
